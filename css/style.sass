@@ -1,0 +1,597 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400|Actor:400,1000)
+
+*
+	box-sizing: border-box
+
+html 
+	font-size: 16px
+
+body 
+	font-family: 'Italic', sans-serif
+	font-size: 16px
+	line-height: 1.5
+
+h1 
+	font-size: 3.25rem
+	line-height: 1.23
+	margin-top: 1rem
+	font-family: 'Italic', sans-serif
+	font-weight: 500
+	text-transform: uppercase
+
+h2 
+	font-size: 2.625rem
+	line-height: 1.19
+	margin-top: 1.5625rem
+	margin-bottom: 1.5625rem
+	font-family: 'Italic', sans-serif
+	font-weight: 600
+	text-transform: uppercase
+
+h3 
+	font-size: 1.625rem
+	line-height: 1.92
+	font-family: 'Open Sans', sans-serif
+	font-weight: 600
+	letter-spacing: 2px
+	text-transform: uppercase
+
+h4 
+	font-size: 1.4rem
+	margin: 20px auto
+	font-family: 'Open Sans', sans-serif
+
+a 
+	text-decoration: none
+
+.row
+	&:before
+		content: ""
+	&:after 
+		content: ""
+	display: table
+	clear: both
+
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+	padding: 50px 0
+	text-align: center
+
+[class*="col-"] 
+	width: 100%
+	float: left
+	min-height: 1px
+	padding: 30px
+
+.col-nopadding 
+	padding: 0
+
+[class*="colX-"] 
+	float: left
+	min-height: 1px
+
+.opacity 
+	background: rgba(0, 0, 0, .5)
+
+.button 
+	height: 40px
+	line-height: 40px
+	width: 150px
+	display: block
+	text-align: center
+	margin: 0 auto
+	margin-top: 20px
+	background: #00c5ea    
+	color: #fff
+	font-size: 1.2rem
+	&:hover 
+		transform: scale(1.05)
+		-webkit-transform: scale(1.05)
+		-ms-transform: scale(1.05)
+		transition: .3s
+		background: #00c5ea    
+		color: #fff
+
+header 
+	width: 100%
+	background: #313234
+	height: 80px
+	
+	.container 
+		padding: 0
+
+	nav
+		height: 50px
+		
+		img
+			padding: 20px 10px
+
+		ul
+			float: right
+			margin: 0
+			padding: 0
+			list-style-type: none
+
+			li
+				display: inline-block
+
+				a
+					line-height: 50px
+					display: block
+					color: #fff
+					padding: 0 10px
+					text-decoration: none
+					text-transform: uppercase
+					transition: 0.3s
+
+				a:hover
+					color: #00c5ea
+					background-color: #313234
+					transform: scale(1.05) 
+
+.nav-bar
+	float: right
+
+	li 
+		display: inline-block
+
+	a 
+		display: block
+		text-align: center
+		padding: 0 20px
+		line-height: 40px
+		color: #fff
+		text-transform: uppercase
+		font-family: 'Open Sans', sans-serif
+		background: #00c5ea
+		color: #313234
+
+.nav-bar
+	&:hover
+		content: ""
+	&:focus
+		content: ""
+	&:active
+		content: ""
+
+.welcome 
+	background: url("https://images.pexels.com/photos/350354/pexels-photo-350354.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") 0/cover no-repeat
+	height: calc(100vh - 50px)
+
+.slogan 
+	max-width: 700px
+	margin-top: 20vh
+	padding: 40px
+	border-radius: 30% 0 0 30%
+	float: right
+	background: rgba(0, 0, 0, .6)
+	color: #fff
+	font-family: 'Open Sans', sans-serif
+	text-transform: uppercase
+
+.three-elements-box 
+	cursor: pointer
+	padding: 20px
+
+	i.fa 
+		width: 65px
+		height: 65px
+		line-height: 65px
+		border-radius: 6px
+		margin-bottom: 20px
+		font-size: 50px
+		color: #fff
+		background: #313234 
+		transition: .3s
+
+	&:hover 
+		i.fa 
+			transform: scale(1.1)
+			-webkit-transform: scale(1.1)
+			-ms-transform: scale(1.1)
+			color: #fff
+			background: #00c5ea
+		h3 
+			color: #00c5ea
+
+.featured-works
+	.container 
+		max-width: 800px 
+		padding-top: 20px
+
+.gallery [class*="col"] 
+	height: 200px
+
+	img 
+		width: 100%
+		height: 200px
+		object-fit: cover
+
+.gallery-box 
+	position: relative
+	&:before 
+		content: ""
+		background: #000
+		opacity: 0
+		margin: 0
+		position: absolute
+		transition: opacity .3s
+
+.layer 
+	position: absolute
+	text-align: center
+	line-height: 200px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	transform: scale(0)
+	-webkit-transform: scale(0)
+	-ms-transform: scale(0)
+	transition: .3s
+
+	i.fa 
+		width: 30px
+		height: 30px
+		line-height: 30px
+		margin-right: 10px
+		border-radius: 5px
+		background: #EDEDED
+		color: #000
+		cursor: pointer
+
+i.fa-link 
+	transform: rotate(90deg)
+	-webkit-transform: rotate(90deg)
+	-ms-transform: rotate(90deg)
+
+
+.gallery-box
+	&:hover
+		.layer 
+			transform: scale(1)
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+	&:hover:before 
+		opacity: .5
+
+.employees 
+	p 
+		max-width: 800px
+		margin: 0 auto
+		padding-bottom: 50px
+	img 
+		width: 200px
+		height: 200px
+		border-radius: 50%
+		object-fit: cover
+
+
+
+.employees-box 
+	width: 200px
+	margin: 0 auto
+	p 
+		position: absolute
+		top: 0
+		line-height: 200px
+		text-align: center
+		width: 200px
+		height: 200px
+		color: #fff
+		background: radial-gradient(rgba( 0, 0, 0, .7), transparent)
+		border-radius: 50%
+		transform: scaleX(0)
+		-webkit-transform: scaleX(0)
+		-ms-transform: scaleX(0)
+		transition: .3s
+
+.employees-description 
+	position: relative
+	height: 200px
+
+	&:hover 
+		p 
+			transform: scaleX(1)
+			-webkit-transform: scaleX(1)
+			-ms-transform: scaleX(1)
+		h4 
+			width: 100%
+			margin: 0 auto
+			text-align: center
+
+.advertising 
+	background: url("https://images.pexels.com/photos/24020/pexels-photo-24020.jpg?w=1260&h=750&auto=compress&cs=tinysrgb") 0/cover fixed
+	color: #fff
+	text-align: center
+	margin-bottom: 0
+	padding-bottom: 0
+
+	p 
+		text-align: left
+
+	h2 
+		text-align: left
+
+.advertising-img 
+	height: 250px
+	width: 250px
+	margin: 0 auto
+	img 
+		width: 100%
+		height: 100%
+		margin-top: 23px
+		object-fit: cover
+		border-radius: 10% 10% 0 0
+
+.advertising
+	.container 
+		padding-bottom: 0
+
+.advertising
+	.button 
+		margin-top: 30px
+
+.numbers-count 
+	font-size: 5rem
+	font-family: 'Actor', sans-serif
+	font-weight: 700
+	margin-bottom: 0
+
+.numbers-comment 
+	margin-top: 5px
+	text-transform: uppercase
+	color: #00c5ea
+	font-size: 20px
+	font-weight: 700
+
+footer 
+	background: #313234
+	color: #fff
+
+	h3 
+		text-transform: uppercase
+		font-family: 'Sans', sans-serif
+		font-weight: 700
+		font-size: 1.875rem
+		margin-bottom: 20px
+		display: inline-block
+		position: relative
+		&:after 
+			content: ""
+			height: 2px
+			width: 90px
+			position: absolute
+			top: 50%
+			left: calc(100% + 10px)
+			background: #fff
+	.contact-info 
+		font-weight: 600
+		text-align: right
+	.address 
+		font-family: 'Actor', sans-serif
+		text-align: center
+	i.fa 
+		background: #00c5ea
+		color: #fff
+		width: 30px
+		height: 30px
+		line-height: 30px
+		border-radius: 5px
+		display: inline-block
+		cursor: pointer
+		margin: 10px 7px 0 0
+		text-align: center
+		transition: .3s
+		&:hover 
+			color: #00c5ea
+			background: #fff
+
+.copyrights 
+	background-color: #1a1a1a
+	text-align: center
+	font-family: 'Actor', sans-serif
+	p 
+		color: white
+
+@media (min-width: 1300px) 
+	.col-1 
+		width: 8.33%
+	.col-2 
+		width: 16.66%
+	.col-3 
+		width: 25%
+	.col-4 
+		width: 33.33%
+	.col-5 
+		width: 41.66%
+	.col-6 
+		width: 50%
+	.col-7 
+		width: 58.33%
+	.col-8 
+		width: 66.66%
+	.col-9 
+		width: 75%
+	.col-10 
+		width: 83.33%
+	.col-11 
+		width: 91.66%
+	.col-12 
+		width: 100%
+	.colX-1 
+		width: 20%
+	.colX-2 
+		width: 40%
+	.colX-3 
+		width: 60%
+	.colX-4 
+		width: 80%
+	.colX-5 
+		width: 100%
+
+@media (max-width: 1300px) 
+	footer 
+		h3
+			&:after 
+				top: 100%
+				left: 50%
+				transform: translateX(-50%)
+				-webkit-transform: translateX(-50%)
+				-ms-transform: translateX(-50%)
+	.gallery 
+		display: inline-block
+		height: auto
+
+@media (max-width: 992px)  
+	.nav-bar
+		a 
+			padding: 0 20px
+    
+	.contact-row
+		.col-m-4 
+			text-align: right
+    
+	.contact-row
+		.col-m-8 
+			text-align: left
+    
+	.gallery 
+		display: inline-block
+		height: auto
+
+@media (min-width: 768px) and (max-width: 992px) 
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+	.col-sm-1 
+		width: 8.33%
+	.col-sm-2 
+		width: 16.66%
+	.col-sm-3 
+		width: 25%
+	.col-sm-4 
+		width: 33.33%
+	.col-sm-5 
+		width: 41.66%
+	.col-sm-6 
+		width: 50%
+	.col-sm-7 
+		width: 58.33%
+	.col-sm-8 
+		width: 66.66%
+	.col-sm-9 
+		width: 75%
+	.col-sm-10 
+		width: 83.33%
+	.col-sm-11 
+		width: 91.66%
+	.col-sm-12 
+		width: 100%
+
+	[class*="col-"] 
+		padding: 10px
+    
+	.col-nopadding 
+		padding: 0
+    
+	.gallery 
+		display: block
+		height: auto
+    
+	.gallery-box
+		.layer 
+			transform: scale(1)
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+    
+	.company-description 
+		p 
+			transform: scale(1)
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+
+@media (max-width: 767px) 
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+	.colX-s-1 
+		width: 20%
+	.colX-s-2 
+		width: 40%
+	.colX-s-3 
+		width: 60%
+	.colX-s-4 
+		width: 80%
+	.colX-s-5 
+		width: 100%
+
+	header
+		nav 
+			height: auto
+			text-align: center
+
+	.gallery 
+		display: block
+		height: auto
+    
+	.gallery-box
+		.layer 
+			transform: scale(1)
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+    
+	.company-description 
+		p 
+			transform: scale(1)
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+    
+	.advertising-img 
+		display: none

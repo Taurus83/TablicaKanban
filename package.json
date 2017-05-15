@@ -1,0 +1,28 @@
+{
+  "name": "kodilla-tablicakanban",
+  "version": "1.0.0",
+  "description": "tablica kanban",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taurus83/TablicaKanban.git"
+  },
+  "keywords": [
+    "tablica",
+    "kanban"
+  ],
+  "author": "Piotr Rucinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taurus83/TablicaKanban/issues"
+  },
+  "homepage": "https://github.com/Taurus83/TablicaKanban#readme"
+}

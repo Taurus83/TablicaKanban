@@ -8,16 +8,16 @@
     osascript -e 'tell app "TextMate" to reload bundles'">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-  <div class="container">
-    <div id="board" class="board">
-      <h1>Tablica kanban</h1>
-      <button class="create-column">Dodaj kolumnę</button>
-      <div class="column-container"></div>
+  <body> 
+  <div id="board" class="board container"> 
+    <h1>Tablica kanban</h1>
+    <div class="add-col">
+      <button class="create-column btn btn-info">Dodaj kolumnę</button>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
+    <div class="row column-container"></div>
+  </div> 
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script> 
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script> 
   <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

@@ -3,8 +3,8 @@ $(function() {
 	function randomString() { 
     	var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
     	var str = '';
-    		for (i = 0; i < 10; i++) {
-        		str += chars[Math.floor(Math.random() * chars.length)];
+    	for (i = 0; i < 10; i++) {
+        	str += chars[Math.floor(Math.random() * chars.length)];
     	}
     	return str;
 	}
@@ -12,17 +12,17 @@ $(function() {
 	function Column(name) {
     	var self = this; // przyda się dla funkcji zagnieżdżonych
 
-    		this.id = randomString();
-    		this.name = name;
-    		this.$element = createColumn();
+    	this.id = randomString();
+    	this.name = name;
+    	this.$element = createColumn();
 
     	function createColumn() { 
     	// TWORZENIE ELEMENTÓW SKŁADOWYCH KOLUMNY
-    		var $column = $('<div>').addClass('column');
+    		var $column = $('<div>').addClass('column col-md-3 col-sm-6 col-xs-12');
 			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
 			var $columnCardList = $('<ul>').addClass('column-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Dodaj kartę');
+			var $columnDelete = $('<button>').addClass('btn btn-delete btn-danger').text('x');
+			var $columnAddCard = $('<button>').addClass('btn add-card btn-info').text('Dodaj kartę');
 
 			// PODPINANIE ODPOWIEDNICH ZDARZEŃ
 			$columnDelete.click(function() {
@@ -56,15 +56,15 @@ $(function() {
 	function Card(description) {
 		var self = this;
 
-			this.id = randomString();
-			this.description = description;
-			this.$element = createCard();
+		this.id = randomString();
+		this.description = description;
+		this.$element = createCard();
 
 		function createCard() {
 			// TWORZENIE KLOCKÓW
 			var $card = $('<li>').addClass('card');
 			var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-			var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+			var $cardDelete = $('<button>').addClass('btn btn-danger btn-delete').text('x');
 
 			// PRZYPIĘCIE ZDARZENIA
 			$cardDelete.click(function(){
@@ -86,8 +86,8 @@ $(function() {
 
 	var board = {
     	name: 'Tablica Kanban',
-    		addColumn: function(column) {
-      			this.$element.append(column.$element);
+    	addColumn: function(column) {
+      		this.$element.append(column.$element);
       	initSortable();
     	},
     	$element: $('#board .column-container')
@@ -101,9 +101,9 @@ $(function() {
 
     	$('.create-column')
   			.click(function(){
-			var name = prompt('Wpisz nazwę kolumny');
-			var column = new Column(name);
-    		board.addColumn(column);
+				var name = prompt('Wpisz nazwę kolumny');
+				var column = new Column(name);
+    			board.addColumn(column);
   		});
   	}
 
@@ -132,12 +132,16 @@ $(function() {
 	var card12 = new Card('jQuery - manipulacja elementami');
 	var card13 = new Card('OOP - podejście obiektowe');
 	var card14 = new Card('AJAX i API');
+	var card15 = new Card('Webinar z Mentorem');
+	var card16 = new Card('Ostylowac tablice kanban');
 
 	// DODAWANIE KART DO KOLUMN
 	todoColumn.addCard(card1);
 	todoColumn.addCard(card14);
+	todoColumn.addCard(card15);
 	doingColumn.addCard(card2);
 	doingColumn.addCard(card13);
+	doingColumn.addCard(card16);
 	doneColumn.addCard(card3);
 	doneColumn.addCard(card4);
 	doneColumn.addCard(card5);

@@ -3,8 +3,8 @@ $(function() {
 	function randomString() { 
     	var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
     	var str = '';
-    	for (i = 0; i < 10; i++) {
-        	str += chars[Math.floor(Math.random() * chars.length)];
+    		for (i = 0; i < 10; i++) {
+        		str += chars[Math.floor(Math.random() * chars.length)];
     	}
     	return str;
 	}
@@ -12,9 +12,9 @@ $(function() {
 	function Column(name) {
     	var self = this; // przyda się dla funkcji zagnieżdżonych
 
-    	this.id = randomString();
-    	this.name = name;
-    	this.$element = createColumn();
+    		this.id = randomString();
+    		this.name = name;
+    		this.$element = createColumn();
 
     	function createColumn() { 
     	// TWORZENIE ELEMENTÓW SKŁADOWYCH KOLUMNY
@@ -26,11 +26,11 @@ $(function() {
 
 			// PODPINANIE ODPOWIEDNICH ZDARZEŃ
 			$columnDelete.click(function() {
-        	self.removeColumn();
+        		self.removeColumn();
 			});
 			//Dodawanie karteczki po kliknięciu w przycisk:
 			$columnAddCard.click(function() {
-        	self.addCard(new Card(prompt("Wpisz nazwę karty")));
+        		self.addCard(new Card(prompt("Wpisz nazwę karty")));
 			});
 
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
@@ -56,9 +56,9 @@ $(function() {
 	function Card(description) {
 		var self = this;
 
-		this.id = randomString();
-		this.description = description;
-		this.$element = createCard();
+			this.id = randomString();
+			this.description = description;
+			this.$element = createCard();
 
 		function createCard() {
 			// TWORZENIE KLOCKÓW
@@ -86,8 +86,8 @@ $(function() {
 
 	var board = {
     	name: 'Tablica Kanban',
-    	addColumn: function(column) {
-      	this.$element.append(column.$element);
+    		addColumn: function(column) {
+      			this.$element.append(column.$element);
       	initSortable();
     	},
     	$element: $('#board .column-container')

@@ -15,6 +15,51 @@ body {
     line-height: 1.5;
 }
 
+.container {
+	width: 1200px;
+	height: 100%;
+	background: #F00000;
+	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	margin: auto;
+}
+
+.board {
+	width: 1200px;
+	border: 2px red;
+	background: #FFF000;
+	margin: auto;
+	border: solid 2px blue;
+	-webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottom-right: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.column-container {
+	max-width: 400pc;
+	border: 2px blue;
+	position: relative;
+	background: #00FFFF;
+	border: solid 2px yellow;
+	margin: auto;
+	-webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottom-right: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 .card-placeholder {
-	background: blue;
+	width: 360px;
+    height: 400px;
+    margin: 60px auto 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 0 rgba(0,0,0,.10);
+}
+
+button {
+	text-decoration: bold;
 }
